@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+* {
+  border-color: rgb(226 232 240);
+}
+
+body {
+  background-color: rgb(248 250 252);
+  color: rgb(15 23 42);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Print styles */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  header {
+    display: none !important;
+  }
+
+  footer {
+    display: none !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-break-avoid {
+    break-inside: avoid;
+  }
+
+  .print-break-after {
+    break-after: page;
+  }
+}
